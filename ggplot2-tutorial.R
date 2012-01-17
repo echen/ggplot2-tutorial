@@ -1,4 +1,5 @@
-#This is a literate programming version of the full tutorial.
+#This is a literate programming version of the full tutorial. 
+#The full tutorial contains a little more information (e.g., a note on how to install R).
 
 # R Basics
 
@@ -166,3 +167,19 @@
         
     # We can also plot both points and lines.
     qplot(age, circumference, data = Orange, geom = c("point", "line"), colour = Tree)
+    
+# Next Steps
+
+#In this post, I skipped over a lot of aspects of R and ggplot2.
+
+#For example,
+
+#* There are many geoms (and other functionalities) in ggplot2 that I didn't cover, e.g., [boxplots](http://had.co.nz/ggplot2/geom_boxplot.html) and [histograms](http://had.co.nz/ggplot2/geom_histogram.html).
+#* I didn't talk about ggplot2's layering system, or the [grammar of graphics](http://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448) it's based on.
+
+#So I'll end with some additional resources on R and ggplot2.
+
+#* I don't use it myself, but [RStudio](http://rstudio.org/) is a popular IDE for R.
+#* The [official ggplot2 documentation](http://had.co.nz/ggplot2/) is great and has lots of examples. There's also an excellent [book](http://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403).
+#* [plyr](http://plyr.had.co.nz/) is another fantastic R package that's also by Hadley Wickham (the author of ggplot2).
+#* The [official R introduction](http://cran.r-project.org/doc/manuals/R-intro.html) is okay, but definitely not great. I haven't found any R tutorials I really like, but I've heard good things about [The Art of R Programming](http://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843).

@@ -1,6 +1,8 @@
 # Introduction
 
-This is a bare-bones introduction to [ggplot2](http://had.co.nz/ggplot2/), a visualization package in [R](http://www.r-project.org/). It assumes no knowledge of R.
+This is a bare-bones introduction to [ggplot2](http://had.co.nz/ggplot2/), a visualization package in [R](http://www.r-project.org/). It assumes no knowledge of R. 
+
+There is also a literate programming version of this tutorial in [`ggplot2-tutorial.R`](https://github.com/echen/ggplot2-tutorial/blob/master/ggplot2-tutorial.R).
 
 # Preview
 
@@ -178,7 +180,7 @@ In the scatterplot examples above, we implicitly used a *point* **geom**, the de
     qplot(Sepal.Length, Petal.Length, data = iris, geom = "point")
     qplot(Sepal.Length, Petal.Length, data = iris)
     
-But we can easily use other types of geoms to create other kinds of plots.
+But we can also easily use other types of geoms to create more kinds of plots.
 
 ### Barcharts: geom = "bar"
 
