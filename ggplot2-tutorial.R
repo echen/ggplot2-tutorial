@@ -183,3 +183,5 @@
 #* The [official ggplot2 documentation](http://had.co.nz/ggplot2/) is great and has lots of examples. There's also an excellent [book](http://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403).
 #* [plyr](http://plyr.had.co.nz/) is another fantastic R package that's also by Hadley Wickham (the author of ggplot2).
 #* The [official R introduction](http://cran.r-project.org/doc/manuals/R-intro.html) is okay, but definitely not great. I haven't found any R tutorials I really like, but I've heard good things about [The Art of R Programming](http://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843).
+
+#Edwin Chen :: [@edchedch](https://twitter.com/#!/edchedch) :: [http://blog.echen.me](http://blog.echen.me/)

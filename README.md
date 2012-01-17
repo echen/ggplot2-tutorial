@@ -39,7 +39,7 @@ Elements are indexed starting at 1, and are accessed with `[]` notation.
 [Data frames](http://www.r-tutor.com/r-introduction/data-frame) are like matrices, but with named columns of different types (similar to [database tables](http://code.google.com/p/sqldf/)).
 
     books = data.frame(
-        title = c("harry potter", "war and peace", "lord of the rings"),
+        title = c("harry potter", "war and peace", "lord of the rings"), # column named "title"
         author = c("rowling", "tolstoy", "tolkien"),
         num_pages = c("350", "875", "500")
     )
@@ -68,20 +68,14 @@ For example, consider the [`data/students.tsv`](https://github.com/echen/r-tutor
     14   95  bob
     13   82  eve
     
-We can import this file into R using [`read.table()`](http://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html)
+We can import this file into R using [`read.table()`](http://stat.ethz.ch/R-manual/R-devel/library/utils/html/read.table.html).
 
-    students = read.table(
-        "data/students.tsv", 
-        header = F, 
-        sep = "\t", 
-        col.names = c("age", "score", "name")
+    students = read.table("data/students.tsv", 
+        header = F, # file does not contain a header (`F` is short for `FALSE`),
+                    # so we must manually specify column names                    
+        sep = "\t", # file is tab-delimited        
+        col.names = c("age", "score", "name") # column names
     )
-    
-where
-
-* `header = F` means that the file does not contain a header (`F` is shorthand for `FALSE`)
-* `sep = "\t"` means that the file is tab-delimited
-* `col.names = c("age", "score", "name")` tells R the column names
 
 We can now access the different columns in the data frame with `students$age`, `students$score`, and `students$name`.
 
@@ -96,15 +90,20 @@ For an example of a file in a different format, look at the [`data/studentsWithH
     
 Here we have the same data, but now the file is comma-delimited and contains a header. We can import this file with
 
-    students = read.table("data/students.tsv", header = T, sep = ",")
+    students = read.table("data/students.tsv", 
+        sep = ",",
+        header = T  # first line contains column names, so we can
+    )               # immediately call `students$age`                    
     
-By setting `header = T`, we tell R that the first line of the file contains column names, so we can immediately access `students$age` and so on. (Note: there is also a `read.csv` function that uses `sep = ","` by default.)
+(Note: there is also a `read.csv` function that uses `sep = ","` by default.)
 
 ## help
 
-There are many more options that `read.table` can take. For a full list of these, just type `help(read.table)` (or equivalently, `?read.table`) at the prompt to access documentation.
+There are many more options that `read.table` can take. For a list of these, just type `help(read.table)` (or `?read.table`) at the prompt to access documentation.
 
-This works for other functions as well.
+    # These work for other functions as well.
+    help(read.table)
+    ?read.table
 
 # ggplot2
 
@@ -126,7 +125,7 @@ Let's look at how to create a scatterplot in ggplot2. We'll use the `iris` data 
 
 What does the data frame contain? We can use the `head` function to look at the first few rows.
 
-    head(iris) # by default, head displays the first 6 rows
+    head(iris) # by default, head displays the first 6 rows. see `?head`
     head(iris, n = 10) # we can also explicitly set the number of rows to display
     
       Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -143,6 +142,9 @@ Let's plot `Sepal.Length` against `Petal.Length` using ggplot2's `qplot()` funct
 
     qplot(Sepal.Length, Petal.Length, data = iris)
     # Plot Sepal.Length vs. Petal.Length, using data from the `iris` data frame.
+    # * First argument `Sepal.Length` goes on the x-axis.
+    # * Second argument `Petal.Length` goes on the y-axis.
+    # * `data = iris` means to look for this data in the `iris` data frame.    
     
 [![Sepal Length vs. Petal Length](http://dl.dropbox.com/u/10506/blog/r/ggplot2/sepal-vs-petal.png)](http://dl.dropbox.com/u/10506/blog/r/ggplot2/sepal-vs-petal.png)
     
@@ -236,3 +238,5 @@ So I'll end with some additional resources on R and ggplot2.
 * The [official ggplot2 documentation](http://had.co.nz/ggplot2/) is great and has lots of examples. There's also an excellent [book](http://www.amazon.com/ggplot2-Elegant-Graphics-Data-Analysis/dp/0387981403).
 * [plyr](http://plyr.had.co.nz/) is another fantastic R package that's also by Hadley Wickham (the author of ggplot2).
 * The [official R introduction](http://cran.r-project.org/doc/manuals/R-intro.html) is okay, but definitely not great. I haven't found any R tutorials I really like, but I've heard good things about [The Art of R Programming](http://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843).
+
+Edwin Chen :: [@edchedch](https://twitter.com/#!/edchedch) :: [http://blog.echen.me](http://blog.echen.me/)
