@@ -1,6 +1,6 @@
 # Introduction
 
-This is a bare-bones introduction to [ggplot2](http://had.co.nz/ggplot2/), a visualization package in [R](http://www.r-project.org/). It assumes no knowledge of R. 
+This is a bare-bones introduction to [ggplot2](http://had.co.nz/ggplot2/), a visualization package in R. It assumes no knowledge of R. 
 
 There is also a literate programming version of this tutorial in [`ggplot2-tutorial.R`](https://github.com/echen/ggplot2-tutorial/blob/master/ggplot2-tutorial.R).
 
@@ -223,9 +223,11 @@ But we can also easily use other types of geoms to create more kinds of plots.
     
 [![Orange Tree with Points](http://dl.dropbox.com/u/10506/blog/r/ggplot2/orange-tree-pointed.png)](http://dl.dropbox.com/u/10506/blog/r/ggplot2/orange-tree-pointed.png)
 
+And that's it with what I'll cover.
+
 # Next Steps
 
-In this post, I skipped over a lot of aspects of R and ggplot2.
+I skipped over a lot of aspects of R and ggplot2 in this intro.
 
 For example,
 
