@@ -154,7 +154,7 @@ To see where each species is located in this graph, we can color each point by a
     
 [![Sepal vs. Petal, Colored by Species](http://dl.dropbox.com/u/10506/blog/r/ggplot2/sepal-vs-petal-specied.png)](http://dl.dropbox.com/u/10506/blog/r/ggplot2/sepal-vs-petal-specied.png)
     
-Similarly, we can let the size of each point denote sepal width, by adding a `size = Sepal.Width` argument.
+Similarly, we can let the size of each point denote petal width, by adding a `size = Petal.Width` argument.
 
     qplot(Sepal.Length, Petal.Length, data = iris, color = Species, size = Petal.Width)
     # We see that Iris setosa flowers have the narrowest petals.
