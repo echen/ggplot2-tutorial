@@ -95,7 +95,7 @@ Here we have the same data, but now the file is comma-delimited and contains a h
         header = T  # first line contains column names, so we can
     )               # immediately call `students$age`                    
     
-(Note: there is also a `read.csv` function that uses `sep = ","` by default.)
+(Note: there is also a `read.csv` function.)
 
 ## help
 
@@ -241,4 +241,4 @@ So I'll end with some additional resources on R and ggplot2.
 * [plyr](http://plyr.had.co.nz/) is another fantastic R package that's also by Hadley Wickham (the author of ggplot2).
 * The [official R introduction](http://cran.r-project.org/doc/manuals/R-intro.html) is okay, but definitely not great. I haven't found any R tutorials I really like, but I've heard good things about [The Art of R Programming](http://www.amazon.com/Art-Programming-Statistical-Software-Design/dp/1593273843).
 
-Edwin Chen :: [@edchedch](https://twitter.com/#!/edchedch) :: [http://blog.echen.me](http://blog.echen.me/)
+Edwin Chen :: [@echen](https://twitter.com/#!/echen) :: [http://blog.echen.me](http://blog.echen.me/)
